@@ -1,0 +1,1036 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <!-- Google tag (gtag.js) - Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QX1ZCF49G6"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-QX1ZCF49G6');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZAYNRON | Assessoria Estratégica de Marketing e Vendas</title>
+    <meta name="description" content="A ZAYNRON é uma Assessoria Estratégica de Marketing e Vendas que conecta posicionamento, conteúdo, campanhas, tráfego pago, processos comerciais, CRM, automação, inteligência artificial e dados para apoiar o crescimento das empresas.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&family=Manrope:wght@400;600;800&display=swap" rel="stylesheet">
+
+    <style>
+        /* ================= COLOR PALETTE & VARIABLES ================= */
+        :root {
+            --deep-black: #030303;
+            --black-sec: #080808;
+            --electric-blue: #006CFF;
+            --light-blue: #00A3FF;
+            --white: #FFFFFF;
+            --gray: #9A9A9A;
+            --font-main: 'Inter', sans-serif;
+            --font-head: 'Manrope', sans-serif;
+            --transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+
+        /* ================= RESET & BASE ================= */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background-color: var(--deep-black); color: var(--white); font-family: var(--font-main); line-height: 1.6; overflow-x: hidden; }
+        a { text-decoration: none; color: inherit; }
+        ul { list-style: none; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 5%; }
+        section { padding: 100px 0; position: relative; }
+        
+        /* Typography */
+        h1, h2, h3, h4 { font-family: var(--font-head); font-weight: 800; line-height: 1.2; }
+        h1 { font-size: 3.5rem; letter-spacing: -1px; margin-bottom: 20px; }
+        h2 { font-size: 2.5rem; margin-bottom: 20px; letter-spacing: -0.5px; }
+        p { color: var(--gray); font-size: 1.125rem; font-weight: 300; margin-bottom: 20px; }
+        .highlight { color: var(--electric-blue); }
+        .text-center { text-align: center; }
+
+        /* ================= BUTTONS ================= */
+        .btn { display: inline-block; padding: 16px 32px; font-weight: 600; border-radius: 4px; cursor: pointer; transition: var(--transition); text-align: center; border: 1px solid transparent; }
+        .btn-primary { background: var(--electric-blue); color: var(--white); box-shadow: 0 4px 20px rgba(0, 108, 255, 0.3); }
+        .btn-primary:hover { background: var(--light-blue); box-shadow: 0 4px 30px rgba(0, 163, 255, 0.5); transform: translateY(-2px); }
+        .btn-outline { background: transparent; border-color: var(--gray); color: var(--white); }
+        .btn-outline:hover { border-color: var(--electric-blue); color: var(--light-blue); }
+        .microcopy { display: block; font-size: 0.85rem; color: var(--gray); margin-top: 10px; }
+
+        /* ================= HEADER ================= */
+        header { position: fixed; width: 100%; top: 0; z-index: 1000; transition: var(--transition); padding: 20px 0; border-bottom: 1px solid transparent; }
+        header.scrolled { background: rgba(3, 3, 3, 0.85); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(255, 255, 255, 0.05); padding: 15px 0; }
+        .nav-container { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-family: var(--font-head); font-size: 1.5rem; font-weight: 800; letter-spacing: 1px; display: flex; align-items: center; gap: 10px; }
+        .logo span { color: var(--electric-blue); }
+        .nav-links { display: flex; gap: 30px; align-items: center; }
+        .nav-links a { font-size: 0.9rem; font-weight: 500; color: var(--gray); transition: var(--transition); }
+        .nav-links a:hover { color: var(--white); }
+        .menu-btn { display: none; font-size: 1.5rem; cursor: pointer; color: var(--white); }
+
+        /* ================= HERO ================= */
+        .hero { min-height: 100vh; display: flex; align-items: center; padding-top: 100px; background: radial-gradient(circle at center, rgba(0, 108, 255, 0.05) 0%, transparent 60%); overflow: hidden; }
+        .hero-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+        .hero-buttons { display: flex; gap: 20px; align-items: center; margin-top: 40px; }
+        
+        /* Visual Hero (Ecossistema) */
+        .eco-visual { display: flex; flex-direction: column; align-items: center; gap: 15px; position: relative; }
+        .eco-node { background: var(--black-sec); border: 1px solid rgba(255, 255, 255, 0.1); padding: 15px 30px; border-radius: 8px; font-family: var(--font-head); font-weight: 600; letter-spacing: 2px; width: 100%; text-align: center; position: relative; z-index: 2; transition: var(--transition); }
+        .eco-node.active { border-color: var(--electric-blue); color: var(--light-blue); box-shadow: 0 0 20px rgba(0, 163, 255, 0.1); }
+        .eco-line { width: 2px; height: 30px; background: rgba(255, 255, 255, 0.1); position: relative; }
+        .eco-line::after { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 50%; background: var(--electric-blue); opacity: 0; animation: pulse-line 2s infinite; }
+        @keyframes pulse-line { 0% { top: -50%; opacity: 0; } 50% { opacity: 1; box-shadow: 0 0 10px var(--electric-blue); } 100% { top: 100%; opacity: 0; } }
+
+        /* ================= IMPACT FRASE ================= */
+        .impact-section { min-height: 50vh; display: flex; align-items: center; justify-content: center; }
+        .impact-text { font-size: 2.5rem; font-family: var(--font-head); font-weight: 800; text-align: center; max-width: 900px; line-height: 1.3; }
+
+        /* ================= GRIDS & CARDS ================= */
+        .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+        .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
+        .card { background: var(--black-sec); border: 1px solid rgba(255,255,255,0.05); padding: 40px; border-radius: 8px; transition: var(--transition); position: relative; overflow: hidden; }
+        .card:hover { border-color: rgba(0, 108, 255, 0.3); transform: translateY(-5px); }
+        .card-number { font-family: var(--font-head); font-size: 2rem; color: var(--electric-blue); font-weight: 800; margin-bottom: 20px; opacity: 0.5; }
+        .card h3 { font-size: 1.25rem; margin-bottom: 15px; }
+        .card p { font-size: 0.95rem; margin-bottom: 0; }
+
+        /* ================= FUNNEL / TIMELINE ================= */
+        .timeline-container { position: relative; padding: 40px 0; }
+        .timeline-track { position: absolute; top: 0; bottom: 0; left: 50%; width: 2px; background: rgba(255,255,255,0.1); transform: translateX(-50%); }
+        .timeline-step { display: flex; justify-content: center; align-items: center; padding: 20px 0; position: relative; }
+        .timeline-step span { background: var(--black-sec); border: 1px solid var(--electric-blue); padding: 10px 30px; border-radius: 30px; font-weight: 600; z-index: 2; color: var(--light-blue); box-shadow: 0 0 15px rgba(0,108,255,0.2); }
+        .timeline-step.lost span { border-color: #ff3333; color: #ff3333; box-shadow: none; opacity: 0.6; }
+
+        /* ================= ECOSYSTEM CIRCULAR ================= */
+        .eco-center { display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 60vh; text-align: center; }
+        .zr-core { width: 120px; height: 120px; border: 2px solid var(--electric-blue); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: var(--font-head); font-size: 2rem; font-weight: 800; color: var(--white); box-shadow: 0 0 40px rgba(0,108,255,0.3); position: relative; margin-bottom: 40px; }
+        .eco-tags { display: flex; flex-wrap: wrap; gap: 15px; justify-content: center; max-width: 800px; }
+        .eco-tag { background: var(--black-sec); border: 1px solid rgba(255,255,255,0.1); padding: 12px 24px; border-radius: 30px; font-size: 0.9rem; font-weight: 600; letter-spacing: 1px; color: var(--gray); transition: var(--transition); }
+        .eco-tag:hover { color: var(--white); border-color: var(--light-blue); }
+
+        /* ================= MULTI-STEP FORM ================= */
+        .form-section { background: var(--black-sec); padding: 60px 0; border-top: 1px solid rgba(255,255,255,0.05); }
+        .form-wrapper { background: var(--deep-black); border: 1px solid rgba(0,108,255,0.2); max-width: 700px; margin: 0 auto; padding: 50px; border-radius: 12px; }
+        .step { display: none; animation: fadeIn 0.5s; }
+        .step.active { display: block; }
+        .form-group { margin-bottom: 25px; }
+        .form-group label { display: block; font-size: 0.9rem; color: var(--gray); margin-bottom: 10px; }
+        .form-control { width: 100%; background: var(--black-sec); border: 1px solid rgba(255,255,255,0.1); color: var(--white); padding: 15px; border-radius: 4px; font-family: var(--font-main); font-size: 1rem; transition: var(--transition); }
+        .form-control:focus { outline: none; border-color: var(--electric-blue); }
+        .step-indicators { display: flex; gap: 10px; margin-bottom: 30px; justify-content: center; }
+        .indicator { width: 100%; height: 4px; background: rgba(255,255,255,0.1); border-radius: 2px; }
+        .indicator.active { background: var(--electric-blue); }
+        .form-actions { display: flex; justify-content: space-between; margin-top: 30px; }
+
+        /* ================= CINEMATIC POSITIONING ================= */
+        .cinematic { height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; background: #000; text-align: center; }
+        .cine-text { font-size: 4rem; font-family: var(--font-head); font-weight: 800; opacity: 0; transform: translateY(30px); transition: all 1s ease; margin-bottom: 20px; }
+        .cine-text.visible { opacity: 1; transform: translateY(0); }
+        .cine-zaynron { font-size: 6rem; color: var(--electric-blue); text-shadow: 0 0 40px rgba(0,108,255,0.4); }
+
+        /* ================= FOOTER & FAB ================= */
+        footer { border-top: 1px solid rgba(255,255,255,0.05); padding: 60px 0 30px; text-align: center; }
+        .footer-links { display: flex; justify-content: center; gap: 25px; margin: 30px 0; flex-wrap: wrap; }
+        .footer-links a { color: var(--gray); font-size: 0.9rem; }
+        .footer-links a:hover { color: var(--white); }
+        
+        .fab { position: fixed; bottom: 30px; right: 30px; width: 60px; height: 60px; background: var(--black-sec); border: 1px solid var(--electric-blue); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; color: var(--light-blue); box-shadow: 0 0 20px rgba(0,108,255,0.2); z-index: 100; transition: var(--transition); }
+        .fab:hover { transform: scale(1.1); box-shadow: 0 0 30px rgba(0,163,255,0.4); }
+
+
+        /* ================= SOCIAL LINKS ================= */
+        .social-links { display: flex; justify-content: center; gap: 12px; margin: 24px 0 8px; }
+        .social-link { width: 34px; height: 34px; border: 1px solid var(--electric-blue); border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; color: var(--light-blue); font-weight: 700; font-size: 0.82rem; transition: var(--transition); }
+        .social-link svg { display: block; } .social-link:hover { background: var(--electric-blue); color: var(--white); transform: translateY(-2px); }
+        .social-note { font-size: 0.75rem; color: var(--gray); opacity: .75; margin-top: 8px; }
+
+        /* ================= ANIMATIONS & UTILS ================= */
+        .reveal { opacity: 0; transform: translateY(40px); transition: all 0.8s ease; }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+        /* Responsive */
+        @media (max-width: 992px) {
+            h1 { font-size: 2.5rem; }
+            h2 { font-size: 2rem; }
+            .hero-grid { grid-template-columns: 1fr; text-align: center; }
+            .hero-buttons { justify-content: center; flex-direction: column; }
+            .hero-buttons .btn { width: 100%; }
+            .nav-links { display: none; position: absolute; top: 100%; left: 0; width: 100%; background: var(--deep-black); flex-direction: column; padding: 20px; border-bottom: 1px solid rgba(255,255,255,0.1); }
+            .nav-links.active { display: flex; }
+            .menu-btn { display: block; }
+            .grid-3, .grid-2 { grid-template-columns: 1fr; }
+            .cine-text { font-size: 2.5rem; }
+            .cine-zaynron { font-size: 3.5rem; }
+            .form-wrapper { padding: 30px 20px; }
+        }
+    
+        /* ===== MOBILE FINAL FIX — ZAYNRON ===== */
+        html, body { width: 100%; max-width: 100%; overflow-x: hidden; }
+        img, svg { max-width: 100%; }
+
+        @media (max-width: 768px) {
+            header, nav, section, footer, .container { max-width: 100vw; }
+
+            nav {
+                width: 100%;
+                padding: 18px 20px;
+            }
+
+            .logo { flex-shrink: 0; }
+
+            .mobile-menu-btn {
+                display: flex !important;
+                position: relative;
+                right: 0;
+                margin-left: auto;
+                width: 42px;
+                height: 42px;
+                align-items: center;
+                justify-content: center;
+                padding: 0;
+                flex-shrink: 0;
+                z-index: 1002;
+            }
+
+            .mobile-menu-btn span {
+                width: 24px;
+                max-width: 24px;
+            }
+
+            .hero {
+                min-height: auto;
+                padding: 115px 20px 55px;
+                overflow: hidden;
+            }
+
+            .hero-content {
+                width: 100%;
+                max-width: 100%;
+                gap: 30px;
+            }
+
+            .hero-text {
+                width: 100%;
+                max-width: 100%;
+                text-align: center;
+            }
+
+            .hero h1 {
+                font-size: clamp(2.45rem, 10.5vw, 3.6rem);
+                line-height: 1.08;
+                letter-spacing: -1.5px;
+                margin-bottom: 24px;
+                word-break: normal;
+            }
+
+            .hero p {
+                max-width: 620px;
+                margin: 0 auto 28px;
+                font-size: 1.03rem;
+                line-height: 1.7;
+            }
+
+            .hero .btn {
+                width: 100%;
+                max-width: 420px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .hero-visual, .ecosystem, .eco-node,
+            .grid-2, .grid-3, .stats-grid, .footer-grid,
+            .card, .form-container, .timeline, .footer-content {
+                width: 100%;
+                max-width: 100%;
+            }
+
+            .fab {
+                right: 16px;
+                bottom: 16px;
+            }
+        }
+
+        @media (max-width: 420px) {
+            nav { padding-left: 16px; padding-right: 16px; }
+            .hero { padding-left: 16px; padding-right: 16px; }
+            .hero h1 {
+                font-size: clamp(2.15rem, 10vw, 2.85rem);
+                letter-spacing: -1px;
+            }
+            .hero p { font-size: 0.98rem; }
+        }
+
+    
+        /* ===== V2.5 — RESPONSIVE WIDTH FIX ===== */
+        @media (max-width: 768px) {
+            *, *::before, *::after {
+                min-width: 0;
+            }
+
+            body, main, header, nav, section, footer,
+            .container, .hero, .hero-content, .hero-text, .hero-visual,
+            .ecosystem, .grid-2, .grid-3, .stats-grid, .footer-grid,
+            .card, .timeline, .form-container {
+                width: 100%;
+                max-width: 100%;
+                box-sizing: border-box;
+            }
+
+            section {
+                overflow: hidden;
+            }
+
+            /* Large section headings were forcing the page wider than the viewport */
+            section h2,
+            .section-title,
+            .big-title {
+                max-width: 100%;
+                font-size: clamp(2rem, 9vw, 3.1rem) !important;
+                line-height: 1.08 !important;
+                letter-spacing: -1px !important;
+                overflow-wrap: break-word;
+                word-wrap: break-word;
+            }
+
+            section p {
+                max-width: 100%;
+                overflow-wrap: break-word;
+            }
+
+            /* Keep ecosystem/tags and cards inside the phone viewport */
+            .eco-tag,
+            .eco-node {
+                max-width: 100%;
+                white-space: normal;
+                text-align: center;
+            }
+
+            .grid-2,
+            .grid-3,
+            .stats-grid,
+            .footer-grid {
+                grid-template-columns: minmax(0, 1fr) !important;
+            }
+
+            .card {
+                margin-left: 0;
+                margin-right: 0;
+            }
+
+            /* Specific visual section seen overflowing on mobile */
+            #solucoes h2,
+            #sobre h2,
+            #desafios h2,
+            #metodo h2 {
+                width: 100%;
+                max-width: 100%;
+            }
+
+            /* Prevent transforms/decorative elements from creating scroll width */
+            .hero-visual,
+            .ecosystem,
+            .timeline,
+            .solution-visual {
+                overflow: hidden;
+            }
+        }
+
+        @media (max-width: 420px) {
+            section h2,
+            .section-title,
+            .big-title {
+                font-size: clamp(1.85rem, 8.7vw, 2.65rem) !important;
+            }
+
+            section {
+                padding-left: 16px;
+                padding-right: 16px;
+            }
+
+            nav {
+                padding-left: 18px;
+                padding-right: 18px;
+            }
+        }
+
+    
+        /* ===== V2.7 — AJUSTES PONTUAIS DE UI/UX ===== */
+
+        /* Contraste do menu */
+        .nav-links a { color: #c7cbd1; }
+        .nav-links a:hover,
+        .nav-links a:focus-visible { color: #ffffff; }
+
+        /* Respiro pontual nos títulos/seções avaliados */
+        .process-section h2,
+        .method-section h2,
+        .ecosystem-section h2 {
+            margin-top: 28px;
+            margin-bottom: 22px;
+        }
+
+        /* Separação adicional após o ecossistema/chips */
+        .ecosystem { margin-bottom: 30px; }
+
+        /* Barra de rolagem mais visível e discreta */
+        html {
+            scrollbar-color: #1677ff #090b0f;
+            scrollbar-width: thin;
+        }
+        ::-webkit-scrollbar { width: 10px; height: 10px; }
+        ::-webkit-scrollbar-track { background: #090b0f; }
+        ::-webkit-scrollbar-thumb {
+            background: #1677ff;
+            border-radius: 10px;
+            border: 2px solid #090b0f;
+        }
+        ::-webkit-scrollbar-thumb:hover { background: #3b8cff; }
+
+        /* Refinamento da tipografia da primeira dobra, sem trocar a fonte */
+        .hero h1 {
+            line-height: 1.06;
+            letter-spacing: -1.2px;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links a { color: #e0e3e7; }
+
+            .process-section h2,
+            .method-section h2,
+            .ecosystem-section h2 {
+                margin-top: 34px;
+                margin-bottom: 24px;
+            }
+
+            .ecosystem { margin-bottom: 36px; }
+
+            .hero h1 {
+                line-height: 1.08;
+                letter-spacing: -0.8px;
+            }
+        }
+
+    
+        /* ===== V2.8 — RESPIRO PONTUAL VALIDADO ===== */
+
+        /* Respiro real entre o fim da seção SOBRE e o início do MÉTODO */
+        #sobre {
+            padding-bottom: 135px;
+        }
+        #metodo {
+            padding-top: 135px;
+        }
+
+        /* Dá espaço abaixo do título do método antes dos itens 01–06 */
+        #metodo > .text-center {
+            margin-bottom: 78px !important;
+        }
+
+        /* Respiro entre os chips do ecossistema e a mensagem "UM SISTEMA..." */
+        #solucoes .eco-tags {
+            margin-bottom: 78px;
+        }
+        #solucoes .eco-tags + div {
+            margin-top: 0 !important;
+        }
+
+        /* Respiro entre a seção do ecossistema e a próxima mensagem principal */
+        #solucoes {
+            padding-bottom: 135px;
+        }
+        #solucoes + section {
+            padding-top: 135px;
+        }
+
+        @media (max-width: 768px) {
+            #sobre {
+                padding-bottom: 90px;
+            }
+            #metodo {
+                padding-top: 90px;
+            }
+            #metodo > .text-center {
+                margin-bottom: 52px !important;
+            }
+            #solucoes .eco-tags {
+                margin-bottom: 58px;
+            }
+            #solucoes {
+                padding-bottom: 90px;
+            }
+            #solucoes + section {
+                padding-top: 90px;
+            }
+        }
+
+    
+        /* ===== V2.9 — SEPARAÇÃO MÉTODO → ECOSSISTEMA ===== */
+        /* Correção específica do ponto mostrado no print:
+           a etapa 06 não deve parecer colada ao núcleo ZR. */
+        #metodo {
+            padding-bottom: 110px !important;
+        }
+
+        #solucoes {
+            margin-top: 70px !important;
+            padding-top: 110px !important;
+            border-top: 1px solid rgba(255,255,255,0.06);
+        }
+
+        #solucoes .zr-core {
+            margin-top: 0 !important;
+            margin-bottom: 55px !important;
+        }
+
+        #solucoes .eco-tags {
+            margin-bottom: 85px !important;
+        }
+
+        #solucoes .eco-tags + div {
+            margin-top: 0 !important;
+        }
+
+        @media (max-width: 768px) {
+            #metodo {
+                padding-bottom: 75px !important;
+            }
+
+            #solucoes {
+                margin-top: 45px !important;
+                padding-top: 75px !important;
+            }
+
+            #solucoes .zr-core {
+                margin-bottom: 42px !important;
+            }
+
+            #solucoes .eco-tags {
+                margin-bottom: 62px !important;
+            }
+        }
+
+    
+        /* ===== V2.10 — TRANSIÇÃO LIMPA ===== */
+        #solucoes {
+            border-top: none !important;
+        }
+
+        /* Mídias institucionais: preserva o layout original quando vazias. */
+        #video-institucional[hidden], #foto-fundador[hidden] { display: none !important; }
+        #video-institucional { padding-top: 55px; padding-bottom: 75px; }
+        #video-institucional .video-box { aspect-ratio: 16 / 9; max-width: 880px; margin: 32px auto 0; border: 1px solid rgba(0,108,255,.35); border-radius: 10px; overflow: hidden; background: #080808; }
+        #video-institucional iframe, #video-institucional video { width: 100%; height: 100%; display: block; border: 0; }
+        #foto-fundador { display: grid; grid-template-columns: minmax(220px, 360px) 1fr; align-items: center; gap: 50px; margin-top: 90px; }
+        #foto-fundador img { display: block; width: 100%; aspect-ratio: 4 / 5; object-fit: cover; border-radius: 10px; border: 1px solid rgba(0,108,255,.4); }
+        #foto-fundador p { margin-bottom: 0; }
+        @media (max-width: 768px) { #video-institucional { padding-top: 35px; padding-bottom: 55px; } #foto-fundador { grid-template-columns: 1fr; gap: 24px; } #foto-fundador img { max-width: 360px; } }
+
+    </style>
+</head>
+<body>
+
+    <header id="header">
+        <div class="container nav-container">
+            <a href="#" class="logo">ZR <span>ZAYNRON</span></a>
+            <div class="menu-btn" onclick="toggleMenu()">☰</div>
+            <nav class="nav-links" id="navMenu">
+                <a href="#inicio">INÍCIO</a>
+                <a href="#desafios">DESAFIOS</a>
+                <a href="#metodo">COMO FUNCIONA</a>
+                <a href="#solucoes">SOLUÇÕES</a>
+                <a href="#diagnostico" class="btn btn-primary" style="padding: 10px 20px;">SOLICITAR DIAGNÓSTICO</a>
+            </nav>
+        </div>
+    </header>
+
+    <section id="inicio" class="hero">
+        <div class="container hero-grid">
+            <div class="hero-content reveal active">
+                <h1>CRESCIMENTO NÃO ACONTECE QUANDO <span class="highlight">MARKETING E VENDAS</span> TRABALHAM SEPARADOS.</h1>
+                <p>A ZAYNRON é uma Assessoria Estratégica de Marketing e Vendas. Conectamos posicionamento, conteúdo, campanhas, tráfego pago, processos comerciais, CRM, automação, inteligência artificial e dados para construir uma operação de crescimento mais integrada, mensurável e eficiente.</p>
+                <div class="hero-buttons">
+                    <a href="#diagnostico" class="btn btn-primary">SOLICITAR DIAGNÓSTICO</a>
+                    <a href="#sobre" class="btn btn-outline">CONHECER A ZAYNRON</a>
+                </div>
+                <span class="microcopy">Diagnóstico inicial • Sem compromisso • Envio de teste via WhatsApp</span>
+            </div>
+            
+            <div class="eco-visual reveal active" style="transition-delay: 0.2s;">
+                <div class="eco-node">ESTRATÉGIA & POSICIONAMENTO</div>
+                <div class="eco-line"></div>
+                <div class="eco-node">MARKETING & GERAÇÃO DE DEMANDA</div>
+                <div class="eco-line"></div>
+                <div class="eco-node">ATENDIMENTO & QUALIFICAÇÃO</div>
+                <div class="eco-line"></div>
+                <div class="eco-node">CRM & FOLLOW-UP</div>
+                <div class="eco-line"></div>
+                <div class="eco-node active">VENDAS, IA & DADOS</div>
+                <div class="eco-line" style="background: var(--electric-blue);"></div>
+                <div class="eco-node active" style="border-color: var(--light-blue); box-shadow: 0 0 30px rgba(0, 163, 255, 0.2);">CRESCIMENTO</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="video-institucional" class="container reveal" hidden>
+        <div class="text-center"><h2 id="video-titulo"></h2><p>Conheça a ZAYNRON e o nosso compromisso com diagnóstico, processo e transparência.</p></div>
+        <div class="video-box" id="video-box"></div>
+    </section>
+
+    <section class="impact-section container reveal">
+        <h2 class="impact-text">MARKETING PODE GERAR OPORTUNIDADES.<br><br>MAS O CRESCIMENTO DEPENDE DO QUE ACONTECE <span class="highlight">DEPOIS.</span></h2>
+    </section>
+
+    <section id="desafios" class="container reveal">
+        <div class="text-center" style="max-width: 800px; margin: 0 auto 60px;">
+            <h2>SUA EMPRESA PODE ESTAR GERANDO OPORTUNIDADES E PERDENDO VENDAS.</h2>
+            <p>Muitas empresas investem em marketing, anúncios e geração de demanda. Mas entre o primeiro contato e o fechamento existem diversos pontos onde oportunidades podem ser perdidas. Onde estão os gargalos da sua operação?</p>
+        </div>
+
+        <div class="timeline-container">
+            <div class="timeline-track"></div>
+            <div class="timeline-step"><span>MARKETING</span></div>
+            <div class="timeline-step"><span>100 LEADS</span></div>
+            <div class="timeline-step lost"><span>Perda por demora na resposta</span></div>
+            <div class="timeline-step"><span>50 ATENDIDOS</span></div>
+            <div class="timeline-step lost"><span>Perda por falta de follow-up</span></div>
+            <div class="timeline-step"><span>20 AGENDADOS</span></div>
+            <div class="timeline-step lost"><span>Perda entre agendamento e fechamento</span></div>
+            <div class="timeline-step"><span>7 VENDAS</span></div>
+        </div>
+
+        <div class="grid-3" style="margin-top: 80px;">
+            <div class="card">
+                <div class="card-number">01</div>
+                <h3>MARKETING SEM DIREÇÃO</h3>
+                <p>A empresa publica, anuncia ou investe em divulgação, mas sem uma estratégia clara de posicionamento, público, oferta e objetivos.</p>
+            </div>
+            <div class="card">
+                <div class="card-number">02</div>
+                <h3>BAIXA GERAÇÃO DE DEMANDA</h3>
+                <p>A presença digital não gera oportunidades suficientes ou a empresa ainda não sabe quais canais e campanhas funcionam melhor.</p>
+            </div>
+            <div class="card">
+                <div class="card-number">03</div>
+                <h3>MARKETING E VENDAS DESCONECTADOS</h3>
+                <p>Leads são gerados, mas a empresa não acompanha com clareza o caminho entre atração, atendimento, proposta e venda.</p>
+            </div>
+            <div class="card">
+                <div class="card-number">04</div>
+                <h3>PROCESSO COMERCIAL FRÁGIL</h3>
+                <p>Atendimento, qualificação, CRM, follow-up e propostas não seguem um processo organizado e mensurável.</p>
+            </div>
+            <div class="card">
+                <div class="card-number">05</div>
+                <h3>TECNOLOGIA SUBUTILIZADA</h3>
+                <p>CRM, automação e inteligência artificial poderiam reduzir tarefas manuais e aumentar a eficiência da operação.</p>
+            </div>
+            <div class="card">
+                <div class="card-number">06</div>
+                <h3>DECISÕES SEM DADOS</h3>
+                <p>Marketing e vendas são conduzidos sem indicadores suficientes para identificar gargalos, oportunidades e prioridades.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="container reveal text-center" style="padding: 150px 0;">
+        <div style="width: 2px; height: 100px; background: var(--electric-blue); margin: 0 auto 30px;"></div>
+        <h2 style="font-size: 3rem;">É AQUI QUE A <span class="highlight">ZAYNRON</span> ENTRA.</h2>
+    </section>
+
+    <section id="sobre" class="container reveal">
+        <div class="text-center" style="margin-bottom: 60px;">
+            <h2>NÃO SOMOS APENAS MARKETING.</h2>
+            <p>A ZAYNRON integra marketing, vendas, processos e tecnologia para ajudar empresas a atrair oportunidades, organizar a jornada comercial, medir resultados e evoluir continuamente.</p>
+        </div>
+
+        <div class="grid-3">
+            <div class="card text-center">
+                <h3>MARKETING</h3>
+                <p>Posicionamento, conteúdo, campanhas, tráfego pago e geração de demanda para alcançar o público certo.</p>
+            </div>
+            <div class="card text-center">
+                <h3>VENDAS</h3>
+                <p>Estruturação de processos comerciais para converter clientes.</p>
+            </div>
+            <div class="card text-center">
+                <h3>CRM</h3>
+                <p>Organização e acompanhamento rigoroso da jornada comercial.</p>
+            </div>
+            <div class="card text-center">
+                <h3>AUTOMAÇÃO</h3>
+                <p>Automação de tarefas para aumentar eficiência operacional.</p>
+            </div>
+            <div class="card text-center">
+                <h3>INTELIGÊNCIA ARTIFICIAL</h3>
+                <p>IA aplicada para melhorar produtividade e análise de dados.</p>
+            </div>
+            <div class="card text-center">
+                <h3>DADOS</h3>
+                <p>Indicadores que mostram onde estão os gargalos e melhorias.</p>
+            </div>
+        </div>
+        <div id="foto-fundador" hidden>
+            <img id="foto-robson" alt="Robson Alexandre, fundador da ZAYNRON" loading="lazy">
+            <div><h2>QUEM ESTÁ POR TRÁS DA ZAYNRON</h2><h3>ROBSON ALEXANDRE</h3><p>A ZAYNRON foi criada em Ji-Paraná, Rondônia, com compromisso com diagnóstico, transparência e processo para aproximar marketing e vendas.</p></div>
+        </div>
+    </section>
+
+    <section id="metodo" class="container reveal">
+        <div class="text-center" style="margin-bottom: 60px;">
+            <h2>CRESCIMENTO PRECISA DE PROCESSO.</h2>
+        </div>
+        <div class="grid-2">
+            <div class="card" style="border: none; background: transparent; padding: 0;">
+                <h3 class="highlight">01 — DIAGNÓSTICO</h3>
+                <p>Entender o negócio, mercado, posicionamento, marketing, vendas, jornada do cliente, processos e indicadores atuais.</p>
+                <br>
+                <h3 class="highlight">02 — ESTRATÉGIA</h3>
+                <p>Definir prioridades, canais, objetivos, plano de ação e a conexão necessária entre marketing e vendas.</p>
+                <br>
+                <h3 class="highlight">03 — IMPLEMENTAÇÃO</h3>
+                <p>Organizar campanhas, processos, CRM, ferramentas, automações e rotinas necessárias para executar o plano.</p>
+            </div>
+            <div class="card" style="border: none; background: transparent; padding: 0;">
+                <h3 class="highlight">04 — OPERAÇÃO</h3>
+                <p>Colocar marketing e vendas em execução com acompanhamento das atividades, oportunidades e processos definidos.</p>
+                <br>
+                <h3 class="highlight">05 — ANÁLISE</h3>
+                <p>Acompanhar indicadores para entender o que funciona, onde estão os gargalos e quais oportunidades merecem atenção.</p>
+                <br>
+                <h3 class="highlight">06 — OTIMIZAÇÃO</h3>
+                <p>Ajustar campanhas, processos e ações com base nos dados para buscar evolução contínua e maior eficiência.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="solucoes" class="container reveal eco-center">
+        <div class="zr-core">ZR</div>
+        <div class="eco-tags">
+            <span class="eco-tag">POSICIONAMENTO</span>
+            <span class="eco-tag">CONTEÚDO</span>
+            <span class="eco-tag">TRÁFEGO PAGO</span>
+            <span class="eco-tag">MARKETING</span>
+            <span class="eco-tag">VENDAS</span>
+            <span class="eco-tag">CRM</span>
+            <span class="eco-tag">PROCESSOS</span>
+            <span class="eco-tag">AUTOMAÇÃO</span>
+            <span class="eco-tag">INTELIGÊNCIA ARTIFICIAL</span>
+            <span class="eco-tag">DADOS</span>
+        </div>
+        <div style="margin-top: 60px;">
+            <h3>UM SISTEMA. VÁRIAS ÁREAS. UM ÚNICO OBJETIVO:</h3>
+            <h2 class="highlight" style="font-size: 4rem; margin-top: 10px;">CRESCIMENTO.</h2>
+            <p style="margin-top: 20px;">Ferramentas sozinhas não resolvem processos. A tecnologia gera mais valor quando existe estratégia e acompanhamento por trás dela.</p>
+        </div>
+    </section>
+
+    <section class="container reveal text-center">
+        <h2>A ZAYNRON AJUDA EMPRESAS QUE QUEREM <span class="highlight">CRESCER COM MAIS ESTRATÉGIA.</span></h2>
+        <p style="max-width: 900px; margin: 20px auto 0;">Da atração à conversão, conectamos Marketing e Vendas para construir um processo de crescimento mais organizado, mensurável e eficiente.</p>
+        <div class="grid-3" style="margin-top: 40px; text-align: left;">
+            <div class="card"><h3>MARKETING SEM DIREÇÃO</h3><p>Querem fortalecer posicionamento, presença digital, conteúdo, campanhas e geração de demanda.</p></div>
+            <div class="card"><h3>BAIXA GERAÇÃO DE OPORTUNIDADES</h3><p>Precisam alcançar o público certo e transformar ações de marketing em novas oportunidades para o negócio.</p></div>
+            <div class="card"><h3>MARKETING E VENDAS DESCONECTADOS</h3><p>Precisam acompanhar melhor o caminho entre atração, atendimento, proposta e fechamento.</p></div>
+            <div class="card"><h3>PROCESSO COMERCIAL</h3><p>Querem estruturar atendimento, qualificação, CRM, follow-up e acompanhamento das oportunidades.</p></div>
+            <div class="card"><h3>TECNOLOGIA E AUTOMAÇÃO</h3><p>Buscam usar CRM, automação e IA para reduzir tarefas manuais e ganhar eficiência.</p></div>
+            <div class="card"><h3>DECISÕES ORIENTADAS POR DADOS</h3><p>Querem transformar métricas de marketing e vendas em informações úteis para decidir e melhorar.</p></div>
+        </div>
+        
+        <div style="margin-top: 100px; padding: 40px; border: 1px dashed rgba(255,255,255,0.2); border-radius: 8px;">
+            <h3 style="color: var(--gray);">ESTAMOS CONSTRUINDO RESULTADOS REAIS.</h3>
+            <p style="margin-top: 10px; font-size: 0.95rem;">A ZAYNRON atua ao lado de empresas de Serviços, B2B, Clínicas e Varejo que desejam estruturar marketing, vendas e tecnologia de forma integrada.</p>
+        </div>
+    </section>
+
+    <section id="diagnostico" class="form-section reveal">
+        <div class="container text-center" style="margin-bottom: 40px;">
+            <h2>ANTES DE MUDAR SUA OPERAÇÃO,<br><span class="highlight">PRECISAMOS ENTENDER COMO ELA FUNCIONA.</span></h2>
+            <p>O Diagnóstico ZAYNRON analisa Marketing, Vendas, processos, tecnologia e dados para identificar gargalos, prioridades e oportunidades de melhoria.</p>
+        </div>
+
+        <div class="form-wrapper">
+            <div class="step-indicators">
+                <div class="indicator active" id="ind-1"></div>
+                <div class="indicator" id="ind-2"></div>
+                <div class="indicator" id="ind-3"></div>
+            </div>
+
+            <form id="qualifyForm" onsubmit="submitForm(event)">
+                <div class="step active" id="step-1">
+                    <h3>1. Dados Básicos</h3>
+                    <p style="font-size: 0.9rem; margin-bottom: 20px;">Primeiro entendemos. Depois estruturamos.</p>
+                    <div class="form-group">
+                        <label>Nome Completo</label>
+                        <input type="text" id="nome" name="nome" class="form-control" required placeholder="Seu nome">
+                    </div>
+                    <div class="form-group">
+                        <label>Empresa</label>
+                        <input type="text" id="empresa" name="empresa" class="form-control" required placeholder="Nome da sua empresa">
+                    </div>
+                    <div class="form-actions" style="justify-content: flex-end;">
+                        <button type="button" class="btn btn-primary" onclick="nextStep(1, 2)">Próxima Etapa</button>
+                    </div>
+                </div>
+
+                <div class="step" id="step-2">
+                    <h3>2. Contato</h3>
+                    <div class="form-group">
+                        <label>WhatsApp</label>
+                        <input type="tel" id="whatsapp" name="whatsapp" class="form-control" required placeholder="(00) 00000-0000">
+                    </div>
+                    <div class="form-group">
+                        <label>Instagram ou Site</label>
+                        <input type="text" id="instagramSite" name="instagramSite" class="form-control" placeholder="@suaempresa ou www.site.com">
+                    </div>
+                    <div class="form-actions">
+                        <button type="button" class="btn btn-outline" onclick="nextStep(2, 1)">Voltar</button>
+                        <button type="button" class="btn btn-primary" onclick="nextStep(2, 3)">Próxima Etapa</button>
+                    </div>
+                </div>
+
+                <div class="step" id="step-3">
+                    <h3>3. Sobre sua Operação</h3>
+                    <div class="form-group">
+                        <label>Hoje sua empresa gera oportunidades de forma previsível?</label>
+                        <select id="previsibilidade" name="previsibilidade" class="form-control" required>
+                            <option value="">Selecione...</option>
+                            <option>Sim</option><option>Parcialmente</option><option>Não</option><option>Não sabemos medir</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Qual é hoje o principal desafio?</label>
+                        <select id="desafio" name="desafio" class="form-control" required>
+                            <option value="">Selecione...</option>
+                            <option>Posicionamento e estratégia de marketing</option><option>Conteúdo e presença digital</option>
+                            <option>Campanhas, tráfego e geração de oportunidades</option><option>Organizar atendimento e processo comercial</option>
+                            <option>Melhorar vendas e conversão</option><option>CRM, automação e processos</option><option>Indicadores e análise de dados</option>
+                        </select>
+                    </div>
+                    <div class="form-group" style="display: flex; gap: 10px; align-items: flex-start; margin-top: 20px;">
+                        <input type="checkbox" required style="margin-top: 5px;">
+                        <label style="font-size: 0.8rem; margin: 0;">Concordo em fornecer meus dados para contato da ZAYNRON e aceito a Política de Privacidade.</label>
+                    </div>
+                    <div class="form-actions">
+                        <button type="button" class="btn btn-outline" onclick="nextStep(3, 2)">Voltar</button>
+                        <button type="submit" class="btn btn-primary">SOLICITAR MEU DIAGNÓSTICO</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <section class="cinematic">
+        <div class="cine-text reveal">MARKETING ATRAI.</div>
+        <div class="cine-text reveal" style="transition-delay: 0.4s;">VENDAS CONVERTEM.</div>
+        <div class="cine-text reveal cine-zaynron" style="transition-delay: 0.8s;">ZAYNRON</div>
+        <div class="cine-text reveal highlight" style="transition-delay: 1.2s; font-size: 3rem;">FAZ CRESCER.</div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="logo" style="justify-content: center;">ZR <span>ZAYNRON</span></div>
+            <p style="margin-top: 15px; font-weight: 500; color: var(--white);">Marketing atrai. Vendas convertem. ZAYNRON faz crescer.</p>
+            <div class="footer-links">
+                <a href="#inicio">Início</a>
+                <a href="#sobre">Sobre</a>
+                <a href="#solucoes">Soluções</a>
+                <a href="#diagnostico">Diagnóstico</a>
+                <span style="color: var(--gray); font-size: 0.9rem;">Privacidade — em implantação</span>
+                <span style="color: var(--gray); font-size: 0.9rem;">Termos — em implantação</span>
+            </div>
+            <div class="social-links" aria-label="Redes sociais ZAYNRON">
+                <a class="social-link" href="https://wa.me/5569984619596?text=Olá!%20Conheci%20a%20ZAYNRON%20pela%20Landing%20Page%20e%20gostaria%20de%20saber%20mais." target="_blank" rel="noopener" aria-label="WhatsApp" title="WhatsApp"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M12.04 2a9.84 9.84 0 0 0-8.43 14.91L2.05 22l5.22-1.52A9.9 9.9 0 1 0 12.04 2Zm0 17.98a8.1 8.1 0 0 1-4.13-1.13l-.3-.18-3.1.9.93-3.02-.2-.31A8.13 8.13 0 1 1 12.04 19.98Zm4.46-6.08c-.24-.12-1.44-.71-1.66-.79-.22-.08-.39-.12-.55.12-.16.24-.63.79-.77.95-.14.16-.28.18-.53.06-.24-.12-1.03-.38-1.96-1.21-.73-.65-1.21-1.45-1.35-1.69-.14-.24-.02-.37.1-.49.11-.11.24-.28.36-.43.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.43-.06-.12-.55-1.32-.75-1.81-.2-.48-.4-.41-.55-.42h-.47c-.16 0-.43.06-.65.3-.22.24-.85.83-.85 2.03s.87 2.36.99 2.52c.12.16 1.72 2.62 4.16 3.68.58.25 1.03.4 1.39.51.58.18 1.11.16 1.53.1.47-.07 1.44-.59 1.64-1.16.2-.57.2-1.06.14-1.16-.06-.1-.22-.16-.46-.28Z"/></svg></a>
+                <a class="social-link" href="https://www.instagram.com/zaynron.br/" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7Zm10.5 1.5a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6Z"/></svg></a>
+                <a class="social-link" href="https://www.facebook.com/zaynron.br" target="_blank" rel="noopener" aria-label="Facebook" title="Facebook"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M13.5 22v-9h3l.45-3.5H13.5V7.27c0-1.01.28-1.7 1.73-1.7H17V2.44A23.7 23.7 0 0 0 14.4 2C11.82 2 10 3.58 10 6.48V9.5H7V13h3v9h3.5Z"/></svg></a>
+            </div>
+            <p class="social-note">Links em validação local antes da publicação oficial da Landing Page.</p>
+            <p style="font-size: 0.8rem; opacity: 0.5;">&copy; 2026 ZAYNRON. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/5569984619596?text=Olá!%20Conheci%20a%20ZAYNRON%20pela%20Landing%20Page%20e%20gostaria%20de%20entender%20melhor%20como%20funciona%20o%20Diagnóstico%20ZAYNRON." target="_blank" rel="noopener" class="fab" aria-label="WhatsApp ZAYNRON" title="WhatsApp ZAYNRON">
+        <svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><path fill="currentColor" d="M12.04 2a9.84 9.84 0 0 0-8.43 14.91L2.05 22l5.22-1.52A9.9 9.9 0 1 0 12.04 2Zm0 17.98a8.1 8.1 0 0 1-4.13-1.13l-.3-.18-3.1.9.93-3.02-.2-.31A8.13 8.13 0 1 1 12.04 19.98Zm4.46-6.08c-.24-.12-1.44-.71-1.66-.79-.22-.08-.39-.12-.55.12-.16.24-.63.79-.77.95-.14.16-.28.18-.53.06-.24-.12-1.03-.38-1.96-1.21-.73-.65-1.21-1.45-1.35-1.69-.14-.24-.02-.37.1-.49.11-.11.24-.28.36-.43.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.43-.06-.12-.55-1.32-.75-1.81-.2-.48-.4-.41-.55-.42h-.47c-.16 0-.43.06-.65.3-.22.24-.85.83-.85 2.03s.87 2.36.99 2.52c.12.16 1.72 2.62 4.16 3.68.58.25 1.03.4 1.39.51.58.18 1.11.16 1.53.1.47-.07 1.44-.59 1.64-1.16.2-.57.2-1.06.14-1.16-.06-.1-.22-.16-.46-.28Z"/></svg>
+    </a>
+
+    <script>
+        // Header Scroll Effect
+        window.addEventListener('scroll', () => {
+            const header = document.getElementById('header');
+            if (window.scrollY > 50) { header.classList.add('scrolled'); } 
+            else { header.classList.remove('scrolled'); }
+        });
+
+        // Mobile Menu Toggle
+        function toggleMenu() {
+            const menu = document.getElementById('navMenu');
+            menu.classList.toggle('active');
+        }
+
+        // Close menu when clicking a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('navMenu').classList.remove('active');
+            });
+        });
+
+        // Intersection Observer (Scroll Animations)
+        const revealElements = document.querySelectorAll('.reveal');
+        const revealOptions = { threshold: 0.15, rootMargin: "0px 0px -50px 0px" };
+        
+        const revealOnScroll = new IntersectionObserver(function(entries, observer) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, revealOptions);
+
+        revealElements.forEach(el => revealOnScroll.observe(el));
+
+        // Form Multi-step Logic
+        function nextStep(current, next) {
+            // Basic validation for current step before proceeding (can be expanded)
+            const currentStepDiv = document.getElementById(`step-${current}`);
+            const inputs = currentStepDiv.querySelectorAll('input[required], select[required]');
+            let valid = true;
+            
+            inputs.forEach(input => {
+                if (!input.value) { valid = false; input.style.borderColor = 'red'; } 
+                else { input.style.borderColor = 'rgba(255,255,255,0.1)'; }
+            });
+
+            if (valid || current > next) { // allow going back without validation
+                document.getElementById(`step-${current}`).classList.remove('active');
+                document.getElementById(`step-${next}`).classList.add('active');
+                
+                // Update Indicators
+                for(let i=1; i<=3; i++) {
+                    if (i <= next) document.getElementById(`ind-${i}`).classList.add('active');
+                    else document.getElementById(`ind-${i}`).classList.remove('active');
+                }
+            }
+        }
+
+        function submitForm(e) {
+            e.preventDefault();
+
+            const nome = document.getElementById('nome').value.trim();
+            const empresa = document.getElementById('empresa').value.trim();
+            const whatsapp = document.getElementById('whatsapp').value.trim();
+            const instagramSite = document.getElementById('instagramSite').value.trim() || 'Não informado';
+            const previsibilidade = document.getElementById('previsibilidade').value;
+            const desafio = document.getElementById('desafio').value;
+
+            const mensagem =
+`Olá! Preenchi o Diagnóstico Inicial pela Landing Page da ZAYNRON.
+
+Nome: ${nome}
+Empresa: ${empresa}
+WhatsApp: ${whatsapp}
+Instagram/Site: ${instagramSite}
+Geração previsível de oportunidades: ${previsibilidade}
+Principal desafio: ${desafio}
+
+Gostaria de conversar sobre o diagnóstico da minha empresa.`;
+
+            const destino = '5569984619596';
+            const url = `https://wa.me/${destino}?text=${encodeURIComponent(mensagem)}`;
+
+            // O formulário funciona em modo de teste: envia as respostas para o WhatsApp.
+            window.open(url, '_blank', 'noopener');
+        }
+    </script>
+
+<script>
+/* ===== ZAYNRON V2.11 — EVENTOS COMERCIAIS GA4 ===== */
+(function () {
+  function sendZaynronEvent(name, params) {
+    if (typeof window.gtag === 'function') {
+      window.gtag('event', name, params || {});
+    }
+  }
+
+  document.addEventListener('click', function (event) {
+    var link = event.target.closest('a[href*="wa.me"], a[href*="whatsapp.com"]');
+    if (!link || link.dataset.diagnosticoSubmit === 'true') return;
+
+    sendZaynronEvent('whatsapp_click', {
+      link_url: link.href,
+      link_text: (link.innerText || link.getAttribute('aria-label') || 'WhatsApp').trim(),
+      contact_type: 'whatsapp'
+    });
+  }, true);
+
+  document.addEventListener('submit', function (event) {
+    var form = event.target;
+    if (!(form instanceof HTMLFormElement)) return;
+
+    var formText = ((form.id || '') + ' ' + (form.className || '') + ' ' + (form.innerText || '')).toLowerCase();
+    var looksLikeDiagnostico =
+      formText.includes('diagn') ||
+      formText.includes('empresa') ||
+      formText.includes('whatsapp');
+
+    if (!looksLikeDiagnostico) return;
+
+    sendZaynronEvent('diagnostico_enviado', {
+      form_id: form.id || 'diagnostico',
+      form_name: form.getAttribute('name') || 'diagnostico',
+      lead_source: 'landing_page'
+    });
+
+    document.querySelectorAll('a[href*="wa.me"], a[href*="whatsapp.com"]').forEach(function (a) {
+      a.dataset.diagnosticoSubmit = 'true';
+      setTimeout(function () { delete a.dataset.diagnosticoSubmit; }, 1500);
+    });
+  }, true);
+})();
+</script>
+
+<script>
+/* Conteúdo publicado pelo painel do mesmo projeto Netlify. */
+(async function () {
+  try {
+    const response = await fetch('/.netlify/functions/content', { cache: 'no-store' });
+    if (!response.ok) return;
+    const media = await response.json();
+    if (media.hasPhoto && media.photoUrl) {
+      const image = document.getElementById('foto-robson');
+      image.onload = function () { document.getElementById('foto-fundador').hidden = false; };
+      image.src = media.photoUrl;
+    }
+    if (!media.videoUrl) return;
+    const url = new URL(media.videoUrl);
+    if (url.protocol !== 'https:') return;
+    const frame = document.getElementById('video-box');
+    let player;
+    if (['youtube.com','www.youtube.com','youtu.be','www.youtu.be'].includes(url.hostname)) {
+      const id = url.hostname.includes('youtu.be') ? url.pathname.slice(1) : url.searchParams.get('v');
+      if (!/^[A-Za-z0-9_-]{11}$/.test(id || '')) return;
+      player = document.createElement('iframe');
+      player.src = 'https://www.youtube-nocookie.com/embed/' + id;
+      player.allow = 'accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture';
+      player.allowFullscreen = true;
+    } else if (['vimeo.com','www.vimeo.com'].includes(url.hostname)) {
+      const id = url.pathname.split('/').filter(Boolean)[0];
+      if (!/^\d+$/.test(id || '')) return;
+      player = document.createElement('iframe');
+      player.src = 'https://player.vimeo.com/video/' + id;
+      player.allowFullscreen = true;
+    } else if (url.pathname.toLowerCase().endsWith('.mp4')) {
+      player = document.createElement('video');
+      player.controls = true;
+      player.preload = 'metadata';
+      player.src = url.href;
+    } else return;
+    if (player.tagName === 'IFRAME') player.title = media.videoTitle || 'Vídeo institucional da ZAYNRON';
+    frame.append(player);
+    document.getElementById('video-titulo').textContent = media.videoTitle || 'CONHEÇA A ZAYNRON';
+    document.getElementById('video-institucional').hidden = false;
+  } catch (error) { console.warn('Mídias institucionais indisponíveis', error); }
+})();
+</script>
+
+</body>
+</html>

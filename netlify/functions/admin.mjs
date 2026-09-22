@@ -42,7 +42,7 @@ export default async function (request) {
       }
       const bytes = Buffer.from(body.image, 'base64');
       const dims = jpegDimensions(bytes);
-      if (bytes.length > 900_000 || dims?.[0] !== 1200 || dims?.[1] !== 1500) {
+      if (bytes.length > 900_000 || dims?.[0] !== 1500 || dims?.[1] !== 1200) {
         return json({ error: 'A foto deve ser JPG com 1200 × 1500 px e até 900 KB.' }, 400);
       }
       await store.set('founder-photo', bytes);
